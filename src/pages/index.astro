@@ -1,11 +1,37 @@
 ---
-import New from '../components/New.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import logo from "../assets/Logo.svg";
+import Box from "../components/Box.astro";
 ---
 
 <Layout>
-	<New />
+    <div class="grid grid-cols-3 min-h-screen gap-4 bg-background">
+        <div class="row-start-2 col-start-2 mx-auto">
+            <img src={logo.src} width="200" height="200" alt="Astro Homepage" />
+        </div>
+        <Box class="row-start-1 col-start-2">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+        <Box class="row-start-1 col-start-3">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+        <Box class="row-start-2 col-start-3">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+        <Box class="row-start-1 row-span-2">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+        <Box class="row-start-3">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+        <Box class="row-start-3 col-span-2">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <p class="mt-4 text-center">Welcome to my website!</p>
+        </Box>
+    </div>
 </Layout>
