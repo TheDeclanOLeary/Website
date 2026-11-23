@@ -1,0 +1,23 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class:list={["deco-box relative p-8 md:p-12", className]}>
+    <div class="relative z-10">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .deco-box {
+        background: #080808;
+        color: white;
+        border-image: url("../assets/Border.svg") 91 fill / 91px;
+        border-image-width: 32px;
+        padding: 91px;
+    }
+</style>
